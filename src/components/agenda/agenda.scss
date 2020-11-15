@@ -7,6 +7,9 @@
 .agenda-item-title {
     font-style: italic;
 }
+.agenda-item-title strong {
+    font-style: normal;
+}
 
 .agenda-item-label-value {
     width: 100%;
@@ -27,6 +30,7 @@
 
 .agenda-whos-who {
     background: rgb(209, 205, 205);
+    padding: 10px 0px;
 }
 .agenda-whos-who .agenda-item-container {
     padding: 0px;

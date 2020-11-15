@@ -1,6 +1,6 @@
 import React, {useReducer, useContext} from 'react';
 
-import {SET_AGENDA, SET_COVER} from './action-defs';
+import {SET_AGENDA, SET_ANNOUNCEMENTS, SET_COVER} from './action-defs';
 
 export const Store = React.createContext();
 
@@ -14,6 +14,8 @@ const reducer = (state, action) => {
             return {...state, cover: action.payload}   
         case SET_AGENDA:
             return {...state, agenda: action.payload}
+        case SET_ANNOUNCEMENTS:
+            return {...state, announcements: action.payload}
         default:
             return state;
     }

@@ -22,3 +22,12 @@ export const AGENDA_ITEMS = {
     CHORISTER: 'CHORISTER',
     ORGANIST: 'ORGANIST'
 }
+
+export const ANNOUNCEMENT_TYPES = {
+    GENERAL: "GENERAL",
+    PRIMARY: 'PRIMARY',
+    YMYW: 'YMYW',
+    ELDERS: 'ELDERS',
+    RS: 'RS',
+    MISSIONARIES: 'MISSIONARIES'
+}

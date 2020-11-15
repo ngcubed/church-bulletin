@@ -1,0 +1,20 @@
+.announcement-section {
+    text-align: left;
+}
+
+.announcement-heading {
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    background: white;
+    border-bottom: 1px solid gray;
+    background-color: rgb(93, 148, 219);
+}
+
+.announcement {
+    padding: 20px;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;
+    border-bottom: 1px solid gray;
+}
