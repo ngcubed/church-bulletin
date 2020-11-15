@@ -2,6 +2,7 @@ import React, {useEffect} from 'react';
 import {useStore, useDispatch} from '../../state/action-store';
 import { getLatestCover } from '../../client/awsClient';
 import { setCover } from '../../state/actions';
+
 import './cover.scss';
 
 const Cover = () => {
@@ -27,10 +28,14 @@ const Cover = () => {
     
     return (
         <div className='cover-container'>
-            <h1>{cover.name}</h1>
-            <h2>{cover.type}</h2>
-            <img src={cover.image} alt='' />
-            <p>{cover.date.toString()}</p>
+            <div className='cover-header'>
+                <img src={cover.logo} alt='logo' id='logo' />
+                <h1>{cover.name}</h1>
+                <h2>{cover.type}</h2>
+                <div className='cover-date'>{cover.date.toString()}</div>
+            </div>
+            {/* <img src={cover.image} alt={cover.imageAlt} id='cover-image' /> */}
+            <div className='cover-image' style={{backgroundImage: `url(${cover.image})`}}></div>
         </div>
     );
 }

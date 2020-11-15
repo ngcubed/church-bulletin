@@ -5,8 +5,10 @@ export const getLatestCover = () => {
     const cover = {
         name: 'Fair Oaks Ward',
         type: 'Sacrament Meeting',
-        date: DateTime.local().toFormat('MMM d yyyy'),
-        image: 'https://assets.ldscdn.org/a8/11/a811320d16783b8f9acdef87ef69baadecd3be831060309/jesus_christ_blessing_children_nephite.jpeg'
+        date: DateTime.local().toFormat('MMM d, yyyy'),
+        image: 'https://assets.ldscdn.org/a8/11/a811320d16783b8f9acdef87ef69baadecd3be831060309/jesus_christ_blessing_children_nephite.jpeg',
+        imageAlt: '',
+        logo: process.env.PUBLIC_URL + '/oaktree.png'
     }
 
     return Promise.resolve(cover);

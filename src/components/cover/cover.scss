@@ -1,0 +1,25 @@
+.cover-container {
+    padding-top: 30px;
+    background-image: linear-gradient(rgb(93, 148, 219), rgba(255,0,0,0) 15%, rgba(255,0,0,0));
+}
+
+.cover-header h2 {
+    margin-top: -15px;
+}
+
+.cover-date {
+    font-style: italic;
+    padding-bottom: 20px;
+}
+
+#logo {
+    width: 200px;
+}
+
+.cover-image {
+    height: 70vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

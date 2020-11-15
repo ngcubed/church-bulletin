@@ -1,0 +1,33 @@
+.agenda-item-container {
+    width: 100%;
+    padding: 10px 0px;
+    border-bottom: 1px solid rgb(209, 205, 205);
+}
+
+.agenda-item-title {
+    font-style: italic;
+}
+
+.agenda-item-label-value {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+.agenda-item-label-value div {
+    margin: 10px 15px;;
+}
+
+.agenda-item-label {
+    text-align: left;
+}
+.agenda-item-value {
+    text-align: right;
+}
+
+.agenda-whos-who {
+    background: rgb(209, 205, 205);
+}
+.agenda-whos-who .agenda-item-container {
+    padding: 0px;
+}

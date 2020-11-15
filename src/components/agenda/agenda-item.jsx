@@ -31,9 +31,9 @@ const AgendaItem = (props) => {
             label = '';
             value = '';
             if(props.item === AGENDA_ITEMS.TESTIMONY) {
-                title = <div className='agenda-item-title'>Sharing of Testimonies</div>
+                title = <div className='agenda-item-title'><strong>Sharing of Testimonies</strong></div>
             } else {
-                title = <div className='agenda-item-title'>Administration of the Sacrament</div>
+                title = <div className='agenda-item-title'><strong>Administration of the Sacrament</strong></div>
             }
             break;
         case AGENDA_ITEMS.SONG:
@@ -52,11 +52,11 @@ const AgendaItem = (props) => {
 
     return (
         <div className='agenda-item-container'>
-            <div className='agenda-item'>
-                <span className='agenda-item-label'>{label}</span>
-                <span className='agenda0item-value'>{value}</span>
-                {title}
+            <div className='agenda-item-label-value'>
+                <div className='agenda-item-label'>{label}</div>
+                <div className='agenda-item-value'>{value}</div>
             </div>
+          {title}
         </div>
     );
 }

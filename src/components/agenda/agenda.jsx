@@ -4,7 +4,7 @@ import {getLatestAgenda} from '../../client/awsClient';
 import {setAgenda} from '../../state/actions';
 import './agenda.scss';
 import AgendaItem from './agenda-item';
-import { AGENDA_ITEMS, SONG_TYPES } from '../shared/shared-defs';
+import { AGENDA_ITEMS } from '../shared/shared-defs';
 
 const Agenda = () => {
     const { agenda } = useStore();
