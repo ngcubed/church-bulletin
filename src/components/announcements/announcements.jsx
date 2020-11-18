@@ -25,9 +25,9 @@ const Announcements = () => {
 
     if(!announcements) return <></>;
 
-    const groupedAnnouncements = Object.values(ANNOUNCEMENT_TYPES).map((value) => {
+    const groupedAnnouncements = Object.values(ANNOUNCEMENT_TYPES).map((value, index) => {
         const filteredAnnouncements = getAnnouncementsByType(value, announcements);
-        return <AnnouncementSection type={value} announcements={filteredAnnouncements} />
+        return <AnnouncementSection type={value} announcements={filteredAnnouncements} key={value+index} />
     })
 
     return (

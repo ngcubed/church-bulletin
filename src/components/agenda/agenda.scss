@@ -1,7 +1,18 @@
+.agenda-container  h2 {
+    background: rgb(93, 148, 219);
+    margin: 0px;
+    padding: 20px 0px;
+    position: sticky;
+    top: 0;
+}
+
 .agenda-item-container {
     width: 100%;
     padding: 10px 0px;
     border-bottom: 1px solid rgb(209, 205, 205);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .agenda-item-title {

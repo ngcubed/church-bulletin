@@ -1,0 +1,26 @@
+.lesson-content {
+    justify-content: center;
+    font-weight: bold;
+    position: relative;
+    top: -30%;
+    background: rgba(255, 255, 255, 0.5);
+    // height: 50%;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1px 5px 25px 5px;
+    border-radius: 10px;
+}
+
+.lesson-image {
+    height: 45vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.lesson-container {
+    overflow: hidden;
+    height: 45vh;
+}

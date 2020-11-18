@@ -6,11 +6,11 @@ import parse from 'html-react-parser';
 const AnnouncementSection = (props) => {
     if(!props.announcements || props.announcements.length === 0) return <></>;
 
-    const announcements = props.announcements.map((announcement) => {
+    const announcements = props.announcements.map((announcement, index) => {
         if(props.type !== announcement.type) return <></>;
 
         return (
-            <div className='announcement'>
+            <div className='announcement' key={index}>
                 {parse(marked(announcement.message))}
             </div>
         );

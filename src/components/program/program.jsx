@@ -2,6 +2,7 @@ import React from 'react';
 import Agenda from '../agenda/agenda';
 import Announcements from '../announcements/announcements';
 import Cover from '../cover/cover';
+import Lesson from '../lesson/lesson';
 import './program.scss';
 
 const Program = () => {
@@ -14,6 +15,7 @@ const Program = () => {
         <div className='program-container'>
             <Cover />
             <Agenda />
+            <Lesson />
             <Announcements />
         </div>
     );

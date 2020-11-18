@@ -1,3 +1,12 @@
+.announcements-container h2 {
+    background: rgb(93, 148, 219);
+    margin: 0px;
+    padding: 20px 0px;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
 .announcement-section {
     text-align: left;
 }
@@ -5,10 +14,10 @@
 .announcement-heading {
     padding: 10px 20px;
     position: sticky;
-    top: 0;
-    background: white;
+    top: 69px;
     border-bottom: 1px solid gray;
-    background-color: rgb(93, 148, 219);
+    background-color: rgb(209, 205, 205);
+    z-index: 0;
 }
 
 .announcement {
@@ -17,4 +26,7 @@
     word-wrap: break-word;
     word-break: break-word;
     border-bottom: 1px solid gray;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
 }
