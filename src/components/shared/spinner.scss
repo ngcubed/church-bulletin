@@ -1,0 +1,25 @@
+.waiting img {
+    height: 25%;
+    transform-style: preserve-3d;
+    margin-top: 60px;
+}
+
+.waiting {
+    height: 100vh;
+    width: 100vw;
+    margin: auto;
+    vertical-align: middle;
+}
+
+@keyframes rotation {
+    from {
+      transform: rotateY(0deg);
+    }
+    to {
+      transform: rotateY(359deg);
+    }
+  }
+
+  .rotate {
+    animation: rotation 2s infinite linear;
+  }

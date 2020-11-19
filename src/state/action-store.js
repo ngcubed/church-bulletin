@@ -1,21 +1,40 @@
 import React, {useReducer, useContext} from 'react';
 
-import {SET_AGENDA, SET_ANNOUNCEMENTS, SET_COVER} from './action-defs';
+import {IS_LOADING, SET_AGENDA, SET_ANNOUNCEMENTS, SET_BULLETIN, SET_COVER, SET_ERROR_MSG, SET_LESSON} from './action-defs';
 
 export const Store = React.createContext();
 
 const initialState = {
-    cover: null
+    cover: null,
+    agenda: null,
+    announcements: null,
+    lesson: null,
+    isLoading: true
 }
 
 const reducer = (state, action) => {
     switch (action.type) {
+        case SET_BULLETIN:
+            return {
+                ...state,
+                cover: action.payload.cover,
+                agenda: action.payload.agenda,
+                announcements: action.payload.announcements,
+                lesson: action.payload.lesson,
+                isLoading: false
+            }
         case SET_COVER:
             return {...state, cover: action.payload}   
         case SET_AGENDA:
             return {...state, agenda: action.payload}
         case SET_ANNOUNCEMENTS:
             return {...state, announcements: action.payload}
+        case SET_LESSON:
+            return {...state, lesson: action.payload}
+        case IS_LOADING:
+            return {...state, isLoading: action.payload}
+        case SET_ERROR_MSG:
+            return {...state, errMsg: action.payload}
         default:
             return state;
     }

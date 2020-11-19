@@ -1,11 +1,14 @@
 import React, {useEffect} from 'react';
+import { getLatestLesson } from '../../client/awsClient';
+import { useDispatch, useStore } from '../../state/action-store';
+import { setLesson } from '../../state/actions';
+import marked from 'marked'
+import parse from 'html-react-parser';
 import './lesson.scss';
 
 const Lesson = () => {
-    const imgURL = 'https://assets.ldscdn.org/65/72/6572283ff93ac68c01b206f88cf410452c270cb2/the_jaredites_leaving_babel.jpeg';
-
-    // const {tranVal, setTranslate} = useState(0);
-    // const {imgPos, setImgPos} = useState();
+    const { lesson } = useStore();
+    const dispatch = useDispatch();
 
     useEffect(() => {
         const handleScroll = (event) => {
@@ -37,13 +40,29 @@ const Lesson = () => {
         }
     })
 
+    useEffect(() => {
+        const getLesson = async () => {
+            const latestLesson = await getLatestLesson();
+            if(latestLesson.error) {
+                console.log('unable to get the latest agenda');
+            } else {
+                dispatch(setLesson(latestLesson));
+            }
+        };
+        if(lesson === null) {
+            getLesson();
+        }
+    }, []); // eslint-disable-line react-hooks/exhaustive-deps
+
+    if(lesson === null) return <></>;
+
     return (
         <div className='lesson-container'>
-            <div className='lesson-image' style={{backgroundImage: `url(${imgURL})`}}></div>
+            <div className='lesson-image' style={{backgroundImage: `url(${lesson.imgURL})`}}></div>
             <div className='lesson-content'>
-                <h2>Come Follow Me</h2>
-                <div className='lesson-block'>Ether 1-5</div>
-                <div className='lesson-title'>Rend That Veil of Unbelief</div>
+                <h2>{lesson.header}</h2>
+                <div className='lesson-block'>{lesson.block}</div>
+                <div className='lesson-title'>{parse(marked(lesson.title))}</div>
             </div>
         </div>
     )

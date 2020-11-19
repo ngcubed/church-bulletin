@@ -1,11 +1,12 @@
 {
-  "name": "church-program",
+  "name": "church-bulletin",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.5",
     "@testing-library/react": "^11.1.2",
     "@testing-library/user-event": "^12.2.2",
+    "axios": "^0.21.0",
     "html-react-parser": "^0.14.1",
     "luxon": "^1.25.0",
     "marked": "^1.2.4",

@@ -19,7 +19,9 @@ const Agenda = () => {
                 dispatch(setAgenda(latestAgenda));
             }
         };
-        getAgenda();
+        if(agenda === null) {
+            getAgenda();
+        }
     }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
     if(!agenda) return <></>;

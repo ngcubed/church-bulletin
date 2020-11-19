@@ -1,7 +1,7 @@
 import { ANNOUNCEMENT_TYPES } from "../shared/shared-defs";
 
 export const getAnnouncementsByType = (type, announcements) => {
-    return announcements.filter(announcement => announcement.type === type)
+    return announcements.messages.filter(announcement => announcement.type === type)
 }
 
 export const getAnnouncementTypeMappings = () => {

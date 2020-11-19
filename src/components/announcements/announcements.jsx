@@ -20,7 +20,9 @@ const Announcements = () => {
                 dispatch(setAnnouncements(latestAnnouncements));
             }
         }
-        getAnnouncements();
+        if(announcements === null) {
+            getAnnouncements();
+        }
     }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
     if(!announcements) return <></>;
