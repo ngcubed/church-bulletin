@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/church-bulletin/static/css/main.1265286c.chunk.css",
-    "main.js": "/church-bulletin/static/js/main.19398065.chunk.js",
-    "main.js.map": "/church-bulletin/static/js/main.19398065.chunk.js.map",
+    "main.js": "/church-bulletin/static/js/main.afd7ebbf.chunk.js",
+    "main.js.map": "/church-bulletin/static/js/main.afd7ebbf.chunk.js.map",
     "runtime-main.js": "/church-bulletin/static/js/runtime-main.03df8090.js",
     "runtime-main.js.map": "/church-bulletin/static/js/runtime-main.03df8090.js.map",
     "static/js/2.faf1de66.chunk.js": "/church-bulletin/static/js/2.faf1de66.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.03df8090.js",
     "static/js/2.faf1de66.chunk.js",
     "static/css/main.1265286c.chunk.css",
-    "static/js/main.19398065.chunk.js"
+    "static/js/main.afd7ebbf.chunk.js"
   ]
 }
