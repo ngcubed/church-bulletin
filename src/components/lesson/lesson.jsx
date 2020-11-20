@@ -19,18 +19,20 @@ const Lesson = () => {
 
             const lessonImage = document.getElementsByClassName('lesson-image')[0];
             const liRect = lessonImage.getBoundingClientRect();
+            lessonImage.style.top = window.pageYOffset + "px";
+
             const screenBottom = window.innerHeight;
             const liDiff = liRect.top - screenBottom * 1;
             let bgPos = 0;
             if(liRect.top < screenBottom && liRect.bottom > 0) {
                 bgPos = liDiff / 2 + 'px';
             }
-            lessonImage.style.backgroundPosition = bgPos;
-            if(window.innerWidth > window.innerHeight) {
-                lessonImage.style.backgroundSize = 'auto 100vw';
-            } else {
-                lessonImage.style.backgroundSize = 'cover';
-            }
+            // lessonImage.style.backgroundPosition = bgPos;
+            // if(window.innerWidth > window.innerHeight) {
+            //     lessonImage.style.backgroundSize = 'auto 100vw';
+            // } else {
+            //     lessonImage.style.backgroundSize = 'cover';
+            // }
         }
 
         window.addEventListener('scroll', handleScroll)
@@ -58,7 +60,9 @@ const Lesson = () => {
 
     return (
         <div className='lesson-container'>
-            <div className='lesson-image' style={{backgroundImage: `url(${lesson.imgURL})`}}></div>
+            <div className='lesson-image-container'>
+                <div className="lesson-image" style={{height: `${window.innerHeight}px`, backgroundImage: `url(${lesson.imgURL})`}}></div>
+            </div>
             <div className='lesson-content'>
                 <h2>{lesson.header}</h2>
                 <div className='lesson-block'>{lesson.block}</div>

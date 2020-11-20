@@ -24,6 +24,19 @@ const Cover = () => {
         }
     },[]) // eslint-disable-line react-hooks/exhaustive-deps
 
+    useEffect(() => {
+        const handleScroll = () => {
+            const img = document.getElementsByClassName('cover-image')[0];
+            img.style.top = window.pageYOffset + 'px';
+        }
+        
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        }
+    });
+
     if(cover === null) return <></>;
 
     const formattedDate = DateTime.fromISO(cover.date).toFormat('MMM d, yyyy');
@@ -35,8 +48,14 @@ const Cover = () => {
                 <h2>{cover.type}</h2>
                 <div className='cover-date'>{formattedDate}</div>
             </div>
-            {/* <img src={cover.image} alt={cover.imageAlt} id='cover-image' /> */}
-            <div className='cover-image' style={{backgroundImage: `url(${cover.image})`}}></div>
+            <div className="cover-image-container">
+                <img 
+                    className='cover-image' 
+                    src={cover.image}
+                    alt=''
+                    height={window.innerHeight}
+                />
+            </div>
         </div>
     );
 }

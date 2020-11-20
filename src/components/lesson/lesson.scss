@@ -12,12 +12,21 @@
     border-radius: 10px;
 }
 
-.lesson-image {
+.lesson-image-container {
     height: 45vh;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
+    width: 100%;
+    overflow: hidden;
+    background-clip: border-box;
+}
+
+.lesson-image {
+    position: relative;
+    display: block;
+    min-height: 100vh;
+    min-width: 100vw;
+    background-position: center center;
     background-size: cover;
+    margin-top: -1870px;
 }
 
 .lesson-container {
