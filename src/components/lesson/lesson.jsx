@@ -16,12 +16,16 @@ const Lesson = () => {
 
             const container = document.getElementsByClassName('lesson-container')[0];
             const containerRect = container.getBoundingClientRect();
+
+            const lessonImage = document.getElementsByClassName('lesson-image')[0];
+
             if(containerRect.top < window.innerHeight) {
                 lessonContent.style.top = containerRect.top * .5 + "px";
+                console.log(containerRect.top / 1000 + 1);
+                lessonImage.style.transform = `scale(${containerRect.top / 1000 + 1.5})`
             }
 
-            // const lessonImage = document.getElementsByClassName('lesson-image')[0];
-            // lessonImage.style.top = window.pageYOffset *.5 + "px";
+            
         }
 
         window.addEventListener('scroll', handleScroll)
