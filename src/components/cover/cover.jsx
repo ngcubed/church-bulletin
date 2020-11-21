@@ -27,7 +27,9 @@ const Cover = () => {
     useEffect(() => {
         const handleScroll = () => {
             const img = document.getElementsByClassName('cover-image')[0];
-            img.style.top = window.pageYOffset + 'px';
+            img.style.top = window.pageYOffset * .4 + 'px';
+            const header = document.getElementsByClassName('cover-header')[0];
+            header.style.top = window.pageYOffset / .85 + 'px';
         }
         
         window.addEventListener('scroll', handleScroll);

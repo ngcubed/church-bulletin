@@ -13,26 +13,15 @@ const Lesson = () => {
     useEffect(() => {
         const handleScroll = (event) => {
             const lessonContent = document.getElementsByClassName('lesson-content')[0];
-            const lcRect = lessonContent.getBoundingClientRect();
-            const yVal = (lcRect.top - window.pageYOffset) / 100 * 3;
-            lessonContent.style.top = -30 + yVal + "%";
 
-            const lessonImage = document.getElementsByClassName('lesson-image')[0];
-            const liRect = lessonImage.getBoundingClientRect();
-            lessonImage.style.top = window.pageYOffset + "px";
-
-            const screenBottom = window.innerHeight;
-            const liDiff = liRect.top - screenBottom * 1;
-            let bgPos = 0;
-            if(liRect.top < screenBottom && liRect.bottom > 0) {
-                bgPos = liDiff / 2 + 'px';
+            const container = document.getElementsByClassName('lesson-container')[0];
+            const containerRect = container.getBoundingClientRect();
+            if(containerRect.top < window.innerHeight) {
+                lessonContent.style.top = containerRect.top * .5 + "px";
             }
-            // lessonImage.style.backgroundPosition = bgPos;
-            // if(window.innerWidth > window.innerHeight) {
-            //     lessonImage.style.backgroundSize = 'auto 100vw';
-            // } else {
-            //     lessonImage.style.backgroundSize = 'cover';
-            // }
+
+            // const lessonImage = document.getElementsByClassName('lesson-image')[0];
+            // lessonImage.style.top = window.pageYOffset *.5 + "px";
         }
 
         window.addEventListener('scroll', handleScroll)
@@ -61,7 +50,11 @@ const Lesson = () => {
     return (
         <div className='lesson-container'>
             <div className='lesson-image-container'>
-                <div className="lesson-image" style={{height: `${window.innerHeight}px`, backgroundImage: `url(${lesson.imgURL})`}}></div>
+                <img
+                    src={lesson.imgURL}
+                    className="lesson-image" 
+                    alt=''
+                />
             </div>
             <div className='lesson-content'>
                 <h2>{lesson.header}</h2>
