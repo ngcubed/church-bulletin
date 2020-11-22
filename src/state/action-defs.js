@@ -5,3 +5,5 @@ export const SET_LESSON = "SET_LESSON";
 export const IS_LOADING = "IS_LOADING"
 export const SET_BULLETIN = "SET_BULLETIN";
 export const SET_ERROR_MSG = "SET_ERROR_MSG";
+export const SET_AUTH = "SET_AUTH";
+export const UNSET_AUTH = "UNSET_AUTH";
