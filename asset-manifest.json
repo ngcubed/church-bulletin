@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/church-bulletin/static/css/main.607b9040.chunk.css",
-    "main.js": "/church-bulletin/static/js/main.8830978d.chunk.js",
-    "main.js.map": "/church-bulletin/static/js/main.8830978d.chunk.js.map",
-    "runtime-main.js": "/church-bulletin/static/js/runtime-main.12641134.js",
-    "runtime-main.js.map": "/church-bulletin/static/js/runtime-main.12641134.js.map",
-    "static/js/2.c53ee69e.chunk.js": "/church-bulletin/static/js/2.c53ee69e.chunk.js",
-    "static/js/2.c53ee69e.chunk.js.map": "/church-bulletin/static/js/2.c53ee69e.chunk.js.map",
-    "static/js/3.c8e6e357.chunk.js": "/church-bulletin/static/js/3.c8e6e357.chunk.js",
-    "static/js/3.c8e6e357.chunk.js.map": "/church-bulletin/static/js/3.c8e6e357.chunk.js.map",
+    "main.js": "/church-bulletin/static/js/main.d6c61a91.chunk.js",
+    "main.js.map": "/church-bulletin/static/js/main.d6c61a91.chunk.js.map",
+    "runtime-main.js": "/church-bulletin/static/js/runtime-main.a9933fd1.js",
+    "runtime-main.js.map": "/church-bulletin/static/js/runtime-main.a9933fd1.js.map",
+    "static/js/2.91889879.chunk.js": "/church-bulletin/static/js/2.91889879.chunk.js",
+    "static/js/2.91889879.chunk.js.map": "/church-bulletin/static/js/2.91889879.chunk.js.map",
+    "static/js/3.b897e114.chunk.js": "/church-bulletin/static/js/3.b897e114.chunk.js",
+    "static/js/3.b897e114.chunk.js.map": "/church-bulletin/static/js/3.b897e114.chunk.js.map",
     "index.html": "/church-bulletin/index.html",
     "static/css/main.607b9040.chunk.css.map": "/church-bulletin/static/css/main.607b9040.chunk.css.map",
-    "static/js/2.c53ee69e.chunk.js.LICENSE.txt": "/church-bulletin/static/js/2.c53ee69e.chunk.js.LICENSE.txt"
+    "static/js/2.91889879.chunk.js.LICENSE.txt": "/church-bulletin/static/js/2.91889879.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.12641134.js",
-    "static/js/2.c53ee69e.chunk.js",
+    "static/js/runtime-main.a9933fd1.js",
+    "static/js/2.91889879.chunk.js",
     "static/css/main.607b9040.chunk.css",
-    "static/js/main.8830978d.chunk.js"
+    "static/js/main.d6c61a91.chunk.js"
   ]
 }
