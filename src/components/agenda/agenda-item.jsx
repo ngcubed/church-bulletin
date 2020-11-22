@@ -1,6 +1,6 @@
 import React from 'react';
 import { useStore } from '../../state/action-store'
-import { AGENDA_ITEMS, SONG_TYPES } from '../shared/shared-defs';
+import { AGENDA_ITEMS, PRAYER_TYPES, SONG_TYPES } from '../shared/shared-defs';
 import { getPrayerByType, getSongByType, getSpeakerByOrder } from './agendaLogic';
 
 const AgendaItem = (props) => {
@@ -25,6 +25,12 @@ const AgendaItem = (props) => {
         case AGENDA_ITEMS.PRAYER:
             const prayer = getPrayerByType(props.type, agenda.prayers);
             value = prayer.name;
+            if(props.type === PRAYER_TYPES.OPENING) {
+                label = 'Invocation'
+            }
+            if(props.type === PRAYER_TYPES.CLOSING) {
+                label = 'Benediction'
+            }
             break;
         case AGENDA_ITEMS.SACRAMENT:
         case AGENDA_ITEMS.TESTIMONY:

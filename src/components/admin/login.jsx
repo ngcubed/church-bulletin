@@ -1,10 +1,12 @@
 import React, {useEffect} from 'react';
+import { useHistory } from 'react-router-dom';
 import { useDispatch } from '../../state/action-store';
 import { setAuth } from '../../state/actions';
 import './login.scss';
 
 const Login = () => {
     const dispatch = useDispatch();
+    const history = useHistory();
     
     useEffect(() => {
         const onSignIn = (googleUser) => {
@@ -20,7 +22,7 @@ const Login = () => {
             // The ID token you need to pass to your backend:
             let token = googleUser.getAuthResponse().id_token;
             dispatch(setAuth(token));
-            
+            history.push('/dashboard');
         }
 
         window.gapi.load('auth2', () => {
@@ -39,8 +41,6 @@ const Login = () => {
             })
         })
     }, []);
-
-    
 
     return (
         <div className='login-page'>
