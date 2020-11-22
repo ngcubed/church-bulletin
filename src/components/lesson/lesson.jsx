@@ -21,11 +21,8 @@ const Lesson = () => {
 
             if(containerRect.top < window.innerHeight) {
                 lessonContent.style.top = containerRect.top * .5 + "px";
-                console.log(containerRect.top / 1000 + 1);
                 lessonImage.style.transform = `scale(${containerRect.top / 1000 + 1.5})`
             }
-
-            
         }
 
         window.addEventListener('scroll', handleScroll)
