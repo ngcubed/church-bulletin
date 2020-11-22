@@ -25,6 +25,9 @@ const Program = () => {
                 <Agenda />
                 <Lesson />
                 <Announcements />
+                <div className='contact'>
+                    For additions/changes to the bulletin please text Bro. Nick Graves
+                </div>
             </div>
         );
     } else {
