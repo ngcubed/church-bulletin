@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/church-bulletin/static/css/main.607b9040.chunk.css",
-    "main.js": "/church-bulletin/static/js/main.9fc23c74.chunk.js",
-    "main.js.map": "/church-bulletin/static/js/main.9fc23c74.chunk.js.map",
+    "main.css": "/church-bulletin/static/css/main.d3f5b048.chunk.css",
+    "main.js": "/church-bulletin/static/js/main.5b47df01.chunk.js",
+    "main.js.map": "/church-bulletin/static/js/main.5b47df01.chunk.js.map",
     "runtime-main.js": "/church-bulletin/static/js/runtime-main.12641134.js",
     "runtime-main.js.map": "/church-bulletin/static/js/runtime-main.12641134.js.map",
     "static/js/2.ca771e8b.chunk.js": "/church-bulletin/static/js/2.ca771e8b.chunk.js",
@@ -10,13 +10,13 @@
     "static/js/3.c8e6e357.chunk.js": "/church-bulletin/static/js/3.c8e6e357.chunk.js",
     "static/js/3.c8e6e357.chunk.js.map": "/church-bulletin/static/js/3.c8e6e357.chunk.js.map",
     "index.html": "/church-bulletin/index.html",
-    "static/css/main.607b9040.chunk.css.map": "/church-bulletin/static/css/main.607b9040.chunk.css.map",
+    "static/css/main.d3f5b048.chunk.css.map": "/church-bulletin/static/css/main.d3f5b048.chunk.css.map",
     "static/js/2.ca771e8b.chunk.js.LICENSE.txt": "/church-bulletin/static/js/2.ca771e8b.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.12641134.js",
     "static/js/2.ca771e8b.chunk.js",
-    "static/css/main.607b9040.chunk.css",
-    "static/js/main.9fc23c74.chunk.js"
+    "static/css/main.d3f5b048.chunk.css",
+    "static/js/main.5b47df01.chunk.js"
   ]
 }
