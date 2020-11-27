@@ -1,4 +1,4 @@
-import {IS_LOADING, SET_AGENDA, SET_ANNOUNCEMENTS, SET_AUTH, SET_BULLETIN, SET_COVER, SET_ERROR_MSG, SET_LESSON, UNSET_AUTH} from './action-defs';
+import {IS_LOADING, SET_AGENDA, SET_ANNOUNCEMENTS, SET_BULLETIN, SET_COVER, SET_ERROR_MSG, SET_LESSON, SET_TOKEN, SET_USER, UNSET_TOKEN, UNSET_USER} from './action-defs';
 
 export const setBulletin = (bulletin) => {
     return {
@@ -42,16 +42,29 @@ export const setLesson = (lesson) => {
     }
 }
 
-export const setAuth = (auth) => {
+export const setUser = (user) => {
     return {
-        type: SET_AUTH,
-        payload: auth
+        type: SET_USER,
+        payload: user
     }
 }
 
-export const unsetAuth = () => {
+export const unsetUser = () => {
     return {
-        type: UNSET_AUTH
+        type: UNSET_USER
+    }
+}
+
+export const setToken = (token) => {
+    return {
+        type: SET_TOKEN,
+        payload: token
+    }
+}
+
+export const unsetToken = () => {
+    return {
+        type: UNSET_TOKEN
     }
 }
 

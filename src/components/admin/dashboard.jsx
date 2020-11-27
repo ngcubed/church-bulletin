@@ -1,10 +1,21 @@
 import React from 'react';
-import {useStore} from '../../state/action-store';
+import { getDashboard } from '../../client/awsClient';
+import {useStore, useDispatch} from '../../state/action-store';
 
 const Dashboard = () => {
-    const {token} = useStore();
+    const {user, token} = useStore();
+    const dispatch = useDispatch();
 
-    return <div>Dashboard</div>
+    const getData = () => {
+        dispatch(getDashboard(dispatch, user.getAuthResponse().id_token, token));
+    }
+
+    return (
+        <div>
+            <div>Dashboard</div>
+            <button onClick={getData}>Get Data</button>
+        </div>
+    )
 }
 
 export default Dashboard;

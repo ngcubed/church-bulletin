@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react';
 import { useHistory } from 'react-router-dom';
 import { useDispatch } from '../../state/action-store';
-import { setAuth } from '../../state/actions';
+import { setUser } from '../../state/actions';
 import './login.scss';
 
 const Login = () => {
@@ -20,8 +20,8 @@ const Login = () => {
             // console.log("Email: " + profile.getEmail());
      
             // The ID token you need to pass to your backend:
-            let token = googleUser.getAuthResponse().id_token;
-            dispatch(setAuth(token));
+            // let token = googleUser.getAuthResponse().id_token;
+            dispatch(setUser(googleUser));
             history.push('/dashboard');
         }
 
@@ -39,8 +39,11 @@ const Login = () => {
                     'onsuccess': onSignIn
                 })
             })
+            .catch((err) => {
+                throw new Error("Unable to authenticate through google. Please try again later")
+            })
         })
-    }, []);
+    }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
     return (
         <div className='login-page'>

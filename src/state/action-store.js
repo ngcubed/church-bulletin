@@ -1,16 +1,18 @@
 import React, {useReducer, useContext} from 'react';
 
-import {IS_LOADING, SET_AGENDA, SET_ANNOUNCEMENTS, SET_AUTH, SET_BULLETIN, SET_COVER, SET_ERROR_MSG, SET_LESSON, UNSET_AUTH} from './action-defs';
+import {IS_LOADING, SET_AGENDA, SET_ANNOUNCEMENTS, SET_BULLETIN, SET_COVER, SET_ERROR_MSG, SET_LESSON, SET_TOKEN, SET_USER, UNSET_TOKEN, UNSET_USER} from './action-defs';
 
 export const Store = React.createContext();
 
 const initialState = {
-    cover: null,
     agenda: null,
     announcements: null,
-    lesson: null,
+    cover: null,
+    errMsg: null,
     isLoading: true,
-    token: null
+    lesson: null,
+    token: null,
+    user: null
 }
 
 const reducer = (state, action) => {
@@ -36,9 +38,13 @@ const reducer = (state, action) => {
             return {...state, isLoading: action.payload}
         case SET_ERROR_MSG:
             return {...state, errMsg: action.payload}
-        case SET_AUTH:
+        case SET_USER:
+            return {...state, user: action.payload}
+        case UNSET_USER:
+            return {...state, user: null}
+        case SET_TOKEN:
             return {...state, token: action.payload}
-        case UNSET_AUTH:
+        case UNSET_TOKEN:
             return {...state, token: null}
         default:
             return state;

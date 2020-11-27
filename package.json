@@ -7,6 +7,8 @@
     "@testing-library/jest-dom": "^5.11.5",
     "@testing-library/react": "^11.1.2",
     "@testing-library/user-event": "^12.2.2",
+    "aws-sdk": "^2.797.0",
+    "aws4": "^1.11.0",
     "axios": "^0.21.0",
     "html-react-parser": "^0.14.1",
     "luxon": "^1.25.0",
