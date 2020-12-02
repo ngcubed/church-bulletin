@@ -1,19 +1,16 @@
 import React from 'react';
-import { getDashboard } from '../../client/awsClient';
-import {useStore, useDispatch} from '../../state/action-store';
+import DashboardTile from './dashboard-tile';
+import './dashboard.scss';
 
-const Dashboard = () => {
-    const {user, token} = useStore();
-    const dispatch = useDispatch();
+const Dashboard = (props) => {
 
-    const getData = () => {
-        dispatch(getDashboard(dispatch, user.getAuthResponse().id_token, token));
-    }
+    if(props.data === null) return <div>Loading...</div>
 
     return (
-        <div>
-            <div>Dashboard</div>
-            <button onClick={getData}>Get Data</button>
+        <div className='dashboard-container'>
+            {props.data.map(tile => {
+                return <DashboardTile data={tile} />
+            })}
         </div>
     )
 }

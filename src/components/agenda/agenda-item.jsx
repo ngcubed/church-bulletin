@@ -45,7 +45,9 @@ const AgendaItem = (props) => {
         case AGENDA_ITEMS.SONG:
             const song = getSongByType(props.type, agenda.songs);
             if(props.type === SONG_TYPES.SPECIAL) {
-                label = 'Special Musical Number:';
+                label = null;
+                title = <div className='agenda-item-title'>Special Musical Number</div>
+                break;
             } else {
                 label = props.type.charAt(0) + props.type.slice(1).toLowerCase() + " Song:";
             }

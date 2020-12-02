@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react';
 import { useHistory } from 'react-router-dom';
 import { useDispatch } from '../../state/action-store';
-import { setUser } from '../../state/actions';
+import { setUser, unsetToken } from '../../state/actions';
 import './login.scss';
 
 const Login = () => {
@@ -22,6 +22,7 @@ const Login = () => {
             // The ID token you need to pass to your backend:
             // let token = googleUser.getAuthResponse().id_token;
             dispatch(setUser(googleUser));
+            dispatch(unsetToken());
             history.push('/dashboard');
         }
 
